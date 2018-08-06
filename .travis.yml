@@ -13,7 +13,7 @@ deploy:
   provider: firebase
   token:
     secure: $FIREBASE_TOKEN
-  message: "Deployed by Travis Ci"
+  message: "Commit $TRAVIS_COMMIT deployed by Travis CI (job $TRAVIS_JOB_NUMBER)"
 
 stages:
   - name: deploy
