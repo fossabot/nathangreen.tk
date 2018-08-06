@@ -15,5 +15,12 @@ install:
 script:
   - htmlproofer ./public
 
-after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
+deploy:
+  provider: firebase
+  token:
+    secure: FIREBASE_TOKEN
+  message: "Deployed by Travis Ci"
+
+stages:
+  - name: deploy
+    if: branch = master
