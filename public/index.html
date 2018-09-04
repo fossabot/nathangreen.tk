@@ -1,7 +1,8 @@
 <html>
     <head>
         <title>About Nathan</title>
-
+        <link href="normalize.css" rel="stylesheet">
+        
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -15,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link href="main.css" rel="stylesheet">
         <link href="animate.min.css" rel="stylesheet">
+        <link href="avgrund.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79894803-4"></script>
@@ -25,9 +27,41 @@
 
             gtag('config', 'UA-79894803-4');
         </script>
+        
+        <script type="text/javascript" src="avgrund.js"></script>
+        <script>
+			function openDialog() {
+				Avgrund.show( "#default-popup" );
+			}
+			function closeDialog() {
+				Avgrund.hide();
+			}
+		</script>
     </head>
 
     <body>
+        <aside id="default-popup" class="avgrund-popup">
+			<p style="font-size: 30px">About</h2>
+			<p>
+				This site uses the following open source libaries:
+                <ul>
+                    <li><a href="https://github.com/daneden/animate.css">animate.css</a></li>
+                    <li><a href="https://github.com/hakimel/Avgrund">Avgrund</a></li>
+                    <li><a href="https://github.com/sindresorhus/github-markdown-css">github-markdown-css</a></li>
+                    <li><a href="https://github.com/necolas/normalize.css/">normalize.css</a></li>
+                </ul>
+			</p>
+			<p>
+				This site is licenced under the GNU General Public License, which can be read <a href="licence.html">here</a>.
+			</p>
+            <br>
+            <p>
+                You can read our privacy policy <a href="privacy.html">here</a>.
+            </p>
+            <br>
+			<p><a class="a-special" href="javascript:closeDialog();">Close this dialog</a></p>
+		</aside>
+        
         <div class="maincontent">
             <div><img class="animated flipInX animation-delay-750" src="nathancropped.png" alt="The Nathan Green logo." width="150"><br><br></div>
             <p class="animated zoomInDown" style="font-size: 40px">Nathan Green</p>
@@ -44,9 +78,13 @@
                 <li class="animated zoomInDown animation-delay-1300"><a href="https://t.me/nathangreen06" target="_blank">Telegram @nathangreen06</a></li>
             </ul>
         </div>
+        
         <div class="footer animated fadeInUp animation-delay-2000">
-            <p style="font-size: 12px">Copyright &copy; 2018 <a href="/">Nathan Green</a></p>
+            <p style="font-size: 12px">Copyright &copy; 2018 <a href="javascript:window.location.reload(true);">Nathan Green</a> | <a href="javascript:openDialog();">More...</a></p>
             <br>
         </div>
+        
+        <div class="avgrund-cover"></div>
+        
     </body>
 </html>
