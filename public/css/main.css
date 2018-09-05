@@ -1,0 +1,126 @@
+.maincontent {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    transform: translate(-50%, -50%);margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    position: relative;
+}
+
+a:visited, a:link, a:active
+{
+    color: black;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+a:hover
+{
+    color: black;
+    background-color: lightgray;
+    outline-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.a-special
+{
+    color: black;
+    background-color: lightgray;
+    outline-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    font-family: 'Open Sans', sans-serif;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.avgrund-popup {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.animation-delay-500 {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.animation-delay-750 {
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 0.75s;
+}
+
+.animation-delay-800 {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.animation-delay-900 {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+.animation-delay-1000 {
+    -webkit-animation-delay: 1.0s;
+    animation-delay: 1.0s;
+}
+
+.animation-delay-1100 {
+    -webkit-animation-delay: 1.1s;
+    animation-delay: 1.1s;
+}
+
+.animation-delay-1200 {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
+.animation-delay-1300 {
+    -webkit-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+}
+
+.animation-delay-2000 {
+    -webkit-animation-delay: 2.0s;
+    animation-delay: 2.0s;
+}
