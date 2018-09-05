@@ -3,17 +3,18 @@ language: node_js
 node_js:
   - "8.11.3"
 
-before_install:
-  - ruby --version
-  - rvm install 2.5.1
-  - ruby --version
-
 install:
-  - npm install -g firebase-tools
   - gem install html-proofer
 
 script:
   - htmlproofer ./public
 
-after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
+deploy:
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
+  message: "Commit $TRAVIS_COMMIT deployed by Travis CI (job $TRAVIS_JOB_NUMBER)"
+
+stages:
+  - name: deploy
+    if: branch = master
